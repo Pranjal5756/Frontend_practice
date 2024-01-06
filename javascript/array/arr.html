@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+     <h2>Current Cars:</h2>
+  <ul id="carList"></ul>
+    <p id="p1"></p>
+  <label for="newCarInput">Add a new car:</label>
+  <input type="text" id="newCarInput">
+  <button onclick="addCar()">Add Car</button>
+</body>
+<script>
+    var cars = ['Car1', 'Car2', 'Car3'];
+    document.getElementById("p1").innerHTML = cars
+    console.log(cars)
+    function displayCars() {
+      var carList = document.getElementById('carList');
+      carList.innerHTML = ''; // Clear the list before updating
+
+      cars.forEach(function(car) {
+        var listItem = document.createElement('li');
+        listItem.textContent = car;
+        carList.appendChild(listItem);
+      });
+    }
+
+    function addCar() {
+      var newCarInput = document.getElementById('newCarInput');
+      var newCar = newCarInput.value;
+
+      if (newCar.trim() !== '') {
+        cars.push(newCar);
+        displayCars();
+        newCarInput.value = ''; // Clear the input field after adding the car
+      }
+    }
+
+    // Initial display of cars
+    displayCars();
+</script>
+</html>

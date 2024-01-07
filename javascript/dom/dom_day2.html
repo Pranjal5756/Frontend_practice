@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom_day2</title>
+</head>
+<body>
+    <div id="demo" title="pk">div</div>
+</body>
+<script>
+    document.getElementById("demo").title = "dem"
+    document.getElementById("demo").style.background = "red"
+    // document.getElementById("demo").setAttribute("onclick", "() => showAlert()");
+    document.getElementById("demo").setAttribute("onclick", "showAlert()");
+    // document.getElementById("demo").setAttribute("onclick", "showAlert()");
+
+    // Define the function to be called on click
+    function showAlert() {
+        alert("okay");
+    }
+</script>
+</html>

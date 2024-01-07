@@ -1,0 +1,31 @@
+<!-- media event -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>onabort Event Example</title>
+</head>
+<body>
+
+  <img id="myImage" src="example.jpg" alt="Example Image" />
+
+  <script>
+    // Get the image element
+    var myImage = document.getElementById('myImage');
+
+    // Attach the onabort event handler
+    myImage.onabort = function() {
+      console.log('Image loading aborted by the user.');
+    };
+
+    // Simulate user aborting the image loading after 2 seconds
+    setTimeout(function() {
+      myImage.src = ''; // Setting an empty source triggers the onabort event
+    }, 2000);
+  </script>
+
+</body>
+</html>

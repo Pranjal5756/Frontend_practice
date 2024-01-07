@@ -1,0 +1,105 @@
+<!-- 
+1. Filtering Elements:
+
+filter()
+find()
+findIndex()
+indexOf()
+
+2. Mapping Elements:
+
+map()
+forEach()
+reduce()
+map with arrow function shorthand
+
+
+3. Reducing Elements:
+
+reduce()
+calculating Product
+flattening 
+couting occurences
+
+4. Checking Element Existence:
+
+includes()
+indexOf()
+find()
+some()
+every()
+
+5. Looping Through Elements:
+
+for loops
+forEach()
+for...of
+map()
+
+6. Conditional Operations:
+
+filtering Elements based on a Condition
+Mapping with Conditional logic
+Reducing with conditional logic
+conditional check with "some" or "every"
+
+practice above for building logic in array -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>day2</title>
+  </head>
+  <body></body>
+  <script>
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+    const filteredFruits = fruits.filter((fruit) => fruit.startsWith("A"));
+
+    console.log(filteredFruits); // Output: ["Apple"]
+  </script>
+  <script>
+    const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+
+    const fruitLengths = fruits1.map((fruit) => fruit.length);
+
+    console.log(fruitLengths); // Output: [6, 6, 5, 5]
+  </script>
+  <script>
+    const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+
+    const totalLength = fruits2.reduce((acc, fruit) => acc + fruit.length, 0);
+
+    console.log(totalLength); // Output: 22
+  </script>
+  <script>
+    const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+    const targetFruit = "Apple";
+
+    const doesExist = fruits3.includes(targetFruit);
+
+    console.log(doesExist); // Output: true
+  </script>
+  <script>
+    const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+
+    for (const fruit of fruits4) {
+      console.log(fruit);
+    }
+  </script>
+  <script>
+    const fruits5 = ["Banana", "Orange", "Apple", "Mango"];
+
+    const modifiedFruits = fruits5.map((fruit) => {
+      if (fruit.startsWith("M")) {
+        return fruit.length * 2;
+      }
+      return fruit;
+    });
+
+    console.log(modifiedFruits); // Output: [ "Banana", "Orange", "Apple", 10 ]
+  </script>
+</html>

@@ -1,5 +1,3 @@
-<!-- ///////////////////////////////////////Script-1 //////////////////////////////////////////////////////////////////-->
-
 
 
 <!-- <!DOCTYPE html>
@@ -48,18 +46,89 @@
 </script>
 </html> -->
 
+<!-- ///////////////////////////////////////Script-2 //////////////////////////////////////////////////////////////////-->
+
+<!-- <!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Arrays</h1>
+    <h2>Looping an Array</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      let fLen = fruits.length;
+
+      let text = "<ul>";
+      for (let i = 0; i < fLen; i++) {
+        text += "<li>" + fruits[i] + "</li>";
+      }
+      text += "</ul>";
+
+      document.getElementById("demo").innerHTML = text;
+    </script>
+  </body>
+</html> -->
 
 <!-- ///////////////////////////////////////Script-2 //////////////////////////////////////////////////////////////////-->
 
+<!-- <!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Arrays</h1>
+    <h2>Looping an Array</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      // Array of fruits
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+      // Initialize a string to hold the HTML for the unordered list
+      let text = "<ul>";
+
+      // Use forEach to iterate through the array and build the list
+      fruits.forEach(function (fruit) {
+        text += "<li>" + fruit + "</li>"; // Add each fruit as a list item
+      });
+
+      text += "</ul>"; // Close the unordered list
+
+      // Set the HTML content of the paragraph element with the id "demo"
+      document.getElementById("demo").innerHTML = text;
+    </script>
+  </body>
+</html> -->
+
+
+<!-- ///////////////////////////////////////Script-2 //////////////////////////////////////////////////////////////////-->
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Array</title>
-</head>
+<html>
 <body>
-  
+<h1>JavaScript Arrays</h1>
+<h2>Looping an Array</h2>
+
+<p id="demo"></p>
+
+<script>
+  // Array of fruits
+  const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+  // Initialize a string to hold the HTML for the unordered list
+  let text = "<ul>";
+
+  // Use for...of loop to iterate through the array and build the list
+  for (const fruit of fruits) {
+    text += "<li>" + fruit + "</li>"; // Add each fruit as a list item
+  }
+
+  text += "</ul>"; // Close the unordered list
+
+  // Set the HTML content of the paragraph element with the id "demo"
+  document.getElementById("demo").innerHTML = text;
+</script>
+
 </body>
 </html>

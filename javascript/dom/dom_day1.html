@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dom</title>
+    <title>Dom_day1</title>
 </head>
 <body>
     <p id="di"></p>
     <div class="div"></div>
     <div class="div"></div>
     <li></li>
+    <div class="pk"></div>
+    <div class="pk"></div>
 </body>
 <script>
     document.getElementById("di").innerHTML = "pranjal";
@@ -19,6 +21,10 @@
     // [1] because getElementsByClassName return htmlCollection
     
     document.getElementsByTagName('li')[0].innerHTML = "priyanshu"
+
     // [1] because getElementsByTagName return htmlCollection
+
+    document.querySelectorAll("div.pk")[0].innerHTML = "ghoda"
+    document.querySelectorAll("div.pk")[1].innerHTML = "ghoda1"
 </script>
 </html>

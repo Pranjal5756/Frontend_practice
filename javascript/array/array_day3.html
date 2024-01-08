@@ -45,15 +45,12 @@ conditional check with "some" or "every"
 
 practice above for building logic in array -->
 
-
-
 <!-- <script>
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 let size = fruits.length;
 console.log(size)
 console.log(fruits)
 </script> -->
-
 
 <!-- <script>
     const fruits = ["Banana", "Orange", "Apple", "Mango", 10];
@@ -141,7 +138,6 @@ fruits.splice(2, 0, "Lemon", "Kiwi");
 console.log(fruits)
 </script> -->
 
-
 <!-- <script>
     const fruits = ["Banana", "Orange", "Apple", "Mango"];
 fruits.toSpliced(2, 0, "Lemon", "Kiwi");
@@ -159,15 +155,11 @@ console.log(fruits)
 console.log(fruits.slice(3));
 </script> -->
 
-
 <!-- 1.length -->
 <!-- this property is used to find out lenght of an array -->
 
-
-
 <!-- toString() -->
 <!-- this method is used to convert all data set inside an array into string. If we use this method, in browser we get string over an array-->
-
 
 <!-- at() -->
 <!-- this method comes into picture in 2022, it is used to find any specific data from an array  -->
@@ -229,4 +221,59 @@ let car2 = new Car("Honda", "Accord");
 // console.log(car1 instanceof Car); // Output: true
 // console.log(car2 instanceof Car); // Output: true
 console.log(car1.make)
+</script> -->
+
+<!-- <script>
+//     Array.prototype.toString = function() {
+//   return "Custom representation: " + this.join(" | ");
+// };
+
+let myArray = [1, 2, 3, 4, 5];
+
+const fucn = (arr) => {
+    arr.toString()
+    arr.join(" | ")
+}
+
+console.log(fucn(myArray));
+// Output: "Custom representation: 1 | 2 | 3 | 4 | 5"
+
+</script> -->
+
+<!-- <script>
+  let myArr = [1, 2, 3, 4, 5];
+
+  // <!-- how to pop out first element of this array -->
+
+  // <!-- see there are 4 method that are involved into poping and pushing such as --  -->
+  // <!-- shift()
+  // unshift()
+  // push()
+  // pop() -->
+
+  // <!-- shift method shift out first element from array, let's see Through practicle way --- -->
+
+  // console.log(myArr.shift())
+  // console.log(myArr)
+
+  // pop() method pop out last element of an array, let's see through practicle way
+  // console.log(myArr.pop())
+  // console.log(myArr)
+
+  // unShift method shift in first element in an array, see
+
+  // console.log(myArr.unshift("pranajl"))
+  // console.log(myArr)
+
+  // push method shift in pop element in an array, see
+
+  // console.log(myArr.push(9))
+  // console.log(myArr)
+
+//   let a = myArr.at(2);
+//   const myArray = String(a).split("").map(Number);
+//   console.log(myArray);
+//   console.log(a);
+//   console.log(myArr);
+  
 </script> -->

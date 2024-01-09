@@ -10,16 +10,31 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         })
         .then(responseData => {
-            // Displaying id and title for each product in the 'result' div
+            // Displaying detailed information for each product in the 'result' div
             const resultDiv = document.getElementById('result');
             const productsArray = responseData.products;
             
-            // productsArray.forEach(product => {
-            //     resultDiv.innerHTML += `
-            //         <p>ID: ${product.id}, Title: ${product.title}</p>
-            //     `;
-            // });
-            console.log(productsArray.sort()) ;
+            productsArray.forEach(product => {
+                resultDiv.innerHTML += `
+                    <div>
+                        <p>ID: ${product.id}</p>
+                        <p>Title: ${product.title}</p>
+                        <p>Description: ${product.description}</p>
+                        <p>Brand: ${product.brand}</p>
+                        <p>Category: ${product.category}</p>
+                        <p>Price: $${product.price}</p>
+                        <p>Discount Percentage: ${product.discountPercentage}%</p>
+                        <p>Rating: ${product.rating}</p>
+                        <p>Stock: ${product.stock}</p>
+                        <p>Thumbnail: <img src="${product.thumbnail}" alt="Thumbnail"></p>
+                        <div>Images:</div>
+                        <ul>
+                            ${product.images.map(image => `<li><img src="${image}" alt="Product Image"></li>`).join('')}
+                        </ul>
+                    </div>
+                    <hr>
+                `;
+            });
         })
         .catch(error => {
             // Handling any errors that occurred during the fetch

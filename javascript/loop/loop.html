@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplication Table of 2</title>
+</head>
+<body>
+
+  <div id="table-container"></div>
+
+  <script>
+    // Function to generate a multiplication table for the number 2
+    function generateMultiplicationTable() {
+      // Create a table element
+      var table = document.createElement("table");
+
+      // Create table body
+      var tbody = document.createElement("tbody");
+
+      for (var i = 1; i <= 10; i++) {
+        var row = document.createElement("tr");
+
+        // Calculate the product for the number 2
+        var product = 2 * i;
+
+        // Create table cells
+        var td1 = document.createElement("td");
+        td1.textContent = `2 * ${i}`;
+        var td2 = document.createElement("td");
+        td2.textContent = `= ${product}`;
+
+        // Append cells to the row
+        row.appendChild(td1);
+        row.appendChild(td2);
+
+        // Append the row to the table body
+        tbody.appendChild(row);
+      }
+
+      table.appendChild(tbody);
+
+      // Append the table to the container
+      var container = document.getElementById("table-container");
+      container.appendChild(table);
+    }
+
+    // Call the function to generate the multiplication table for 2
+    generateMultiplicationTable();
+  </script>
+
+</body>
+</html>

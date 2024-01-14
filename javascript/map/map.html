@@ -1,14 +1,38 @@
-<Script>
-    // maps hold key value pairs where the key can be any datatype
-    // A maps remembers the original insertions order of the keys
-    // there are several methods presents for maps such as 
-    // new Map()
-    // set()
-    // get()
-    // delete()
-    // has()
-    // forEach()
-    // entries()
+<script>
+  // maps hold key value pairs where the key can be any datatype
+  // A maps remembers the original insertions order of the keys
+  // there are several methods presents for maps such as
+  // new Map()
+  // set()  Sets the value for a key in a Map
+  // get()  Gets the value for a key in a Map
+  // delete() Removes a Map element specified by the key
+  // has()  Returns true if a key exists in a Map
+  // forEach()  Calls a function for each key/value pair in a Map
+  // entries()  Returns an iterator with the [key, value] pairs in a Map
+  //   (size) Returns the number of elements in a Map
 
-    let map1 = new Map()
-</Script>
+  const fruits = new Map([
+    ["apples", 500],
+    ["bananas", 300],
+    ["oranges", 200],
+  ]);
+
+  console.log(fruits.get("oranges"));
+  console.log(fruits.set("pranjal", 20));
+  fruits.delete("pranjal");
+  console.log(fruits);
+  console.log(fruits.has("pranjal"));
+
+  let text = "";
+  fruits.forEach(function (value, key) {
+    text += key + " = " + value + "<br>";
+  })
+  console.log(text);
+
+
+let text1 = "";
+for (const x of fruits.entries()) {
+  text1 += x + "<br>";
+}
+console.log(text1)
+</script>

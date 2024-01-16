@@ -1,0 +1,57 @@
+<script>
+  // Accessing JavaScript Properties
+  // objectName.property
+  // objectName["property"]
+  // objectName[expression]
+
+  const person = {
+    firstname: "John",
+    lastname: "Doe",
+    age: 50,
+    eyecolor: "blue",
+  };
+
+  x = "firstname";
+
+  console.log(person["firstname"])
+  console.log(person.firstname)
+  console.log(person[x])
+
+//   loop in object 
+
+let text = " ";
+for(let items in person){
+    text += person[items] + " ";
+}
+
+console.log(text)
+
+// adding new properties in object 
+
+person.age2 = 55;
+
+console.log(person)
+
+// deleting object properties in object 
+
+delete person.age;
+
+console.log(person.age)
+console.log(person)
+
+
+// Nested Objects 
+
+myObj = {
+  name:"John",
+  age:30,
+  cars: {
+    car1:"Ford",
+    car2:"BMW",
+    car3:"Fiat"
+  }
+}
+
+console.log(myObj);
+
+</script>
